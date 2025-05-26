@@ -10,14 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clonar el código
+      - name: Clonar el código
       uses: actions/checkout@v3
-
-    - name: Configurar Java
+        - name: Configurar Java
       uses: actions/setup-java@v3
       with:
-        java-version: '17'
-        distribution: 'temurin'
-
-    - name: Ejecutar pruebas Karate
-    run: mvn test -Dtest=PetTestRunner
+      java-version: '17'
+      distribution: 'temurin'
+        - name: Ejecutar pruebas Karate
+      run: mvn test -Dtest=PetTestRunner
