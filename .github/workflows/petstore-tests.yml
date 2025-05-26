@@ -9,7 +9,7 @@ jobs:
   karate-tests:
     runs-on: ubuntu-latest
 
-    steps:
+  steps:
       - name: Clonar el código
       uses: actions/checkout@v3
         - name: Configurar Java
