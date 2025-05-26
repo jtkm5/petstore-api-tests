@@ -15,7 +15,7 @@ jobs:
         - name: Configurar Java
       uses: actions/setup-java@v3
       with:
-      java-version: '17'
+      java-version: '11'
       distribution: 'temurin'
         - name: Ejecutar pruebas Karate
       run: mvn test -Dtest=PetTestRunner
