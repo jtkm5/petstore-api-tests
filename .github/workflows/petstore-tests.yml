@@ -58,3 +58,14 @@ jobs:
         with:
           name: reportes-ui
           path: ui-tests/playwright-report
+
+      - name: Generar reporte HTML de Cucumber
+        working-directory: ui-tests
+        run: node generate-report.js
+
+      - name: Subir reporte HTML de Cucumber
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-html-cucumber
+          path: ui-tests/reports/cucumber-report.html
